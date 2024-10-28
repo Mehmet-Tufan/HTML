@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bileşenleri</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 200px;
+        }
+        input{
+            display: inline-block;
+            width: 250px;
+            height: 22px;
+
+        }
+        div{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" style="text-align: center; color: maroon;">
+        <h1>Form bileşenleri - Kullanıcı Bilgi girişleri</h1>
+    </div>
+    <div id="body">
+        <!--
+        input type -> input bileşenini türünü belirtir.
+        türler : text, radio, password, email, tel, check box
+
+        input name ->
+
+        input id ->
+
+        label for -> ilgili bileşeni işa
+        -->
+
+        <!--
+        DİKKAT!!!
+        inline element -> 
+
+        block element ->
+
+        inline-block element ->
+        -->
+        <div>
+            <label for="name">Adınız Soyadınız : </label>
+            <input type="text" name="adSoyad" id="name">
+        </div>
+        <div>
+            <label for="email">Email Adresiniz : </label>
+            <input type="email" name="email" id="email">
+
+        </div>
+        <div>
+            
+        <label for="">Kullanıcı Adınız : </label>
+        <input type="text" name="userName" id="userName">
+
+        </div>
+        <div>
+            <label for="">Şifreniz : </label>
+            <input type="password" name="sifre" id="sifre">
+
+        </div>
+
+        <div>
+            <label style="font-weight: bolder;" >İlgi alanlarınız</label><br>
+            <input type="checkbox"><label >Yüzme</label><br>
+            <input type="checkbox"><label >Kitap Okumak</label><br>
+
+        </div>
+
+        <div>
+            <label style="font-weight: bolder;">Hangi yazılım dilini seviyorsun</label><br>
+            <input type="radio" name="yd" id="yd1"><label >Java</label><br>
+            <input type="radio" name="yd" id="yd2"><label >C#</label><br>
+        </div>
+       
+     
+   
+    </div>
+</body>
+</html>
