@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Register Fetch</title>
     <style>
         div{
-            margin-bottom: 5px ;
+            margin-bottom: 5px;
         }
         label{
             display: block;
@@ -18,60 +18,52 @@
         }
     </style>
 </head>
-<body>
-   
+<body>    
         <div>
-            <label for="username">username</label>
-            <input type="text" name="username" required>
+            <label for="username">UserName</label>
+            <input type="text" name="username" id="username" required>
         </div>
         <div>
             <label for="email">E-Posta</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" id="email" required>
         </div>
         <div>
             <label for="password">Şifre</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" id="password" required>
         </div>
         <div>
-            <label for="rePassword">Şifre Doğrulama</label>
-            <input type="rePassword" name="rePassword" required>
+            <label for="repassword">Şifre Doğrulama</label>
+            <input type="password" name="rePassword" id="repassword" required>
         </div>
         <div>
-            <button onclick="register()" type="submit">Üye ol</button>
-        
-        </div>
+            <button onclick="register()" type="submit">Üye Ol</button>
+        </div>        
         <script>
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const rePassword = document.getElementById('rePassword').value;
-
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const rePassword = document.getElementById('repassword');            
             function register(){
-                if(password.value !== rePassword.value){
-                    alert('Şifreler uyuşmuyor')
-
-                }else{
-                    fetch('http://localhost:9090/v1/dev/user/register',
-                        {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/jason'
-                            },
-                            body: JSON.stringify({
-                                'username': username.value,
-                                'email': email.value,
-                                'password': password.value,
-                                'rePassword': rePassword.value
-
-                            })
-                        }
-
-                    ).then(data => data.json())
-                    .then(data => console.log(data))
-                }
-            }
-
+                    if(password.value !== rePassword.value){
+                           alert('Şifreler uyuşmuyor lütfen kontrol ediniz.');
+                    }else{
+                        fetch('http://localhost:9090/v1/dev/user/register',
+                            {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    'username': username.value,
+                                    'email': email.value,
+                                    'password': password.value,
+                                    'rePassword': rePassword.value
+                                })
+                            }
+                        ).then(data => data.json())
+                        .then(data=> console.log(data));
+                    }
+            }         
         </script>
-   
 </body>
 </html>
