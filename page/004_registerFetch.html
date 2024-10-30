@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        div{
+            margin-bottom: 5px ;
+        }
+        label{
+            display: block;
+            margin-bottom: 3px;
+        }
+        input{
+            width: 45%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+   
+        <div>
+            <label for="username">username</label>
+            <input type="text" name="username" required>
+        </div>
+        <div>
+            <label for="email">E-Posta</label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Şifre</label>
+            <input type="password" name="password" required>
+        </div>
+        <div>
+            <label for="rePassword">Şifre Doğrulama</label>
+            <input type="rePassword" name="rePassword" required>
+        </div>
+        <div>
+            <button onclick="register()" type="submit">Üye ol</button>
+        
+        </div>
+        <script>
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rePassword = document.getElementById('rePassword').value;
+
+            function register(){
+                if(password.value !== rePassword.value){
+                    alert('Şifreler uyuşmuyor')
+
+                }else{
+                    fetch('http://localhost:9090/v1/dev/user/register',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/jason'
+                            },
+                            body: JSON.stringify({
+                                'username': username.value,
+                                'email': email.value,
+                                'password': password.value,
+                                'rePassword': rePassword.value
+
+                            })
+                        }
+
+                    ).then(data => data.json())
+                    .then(data => console.log(data))
+                }
+            }
+
+        </script>
+   
+</body>
+</html>
