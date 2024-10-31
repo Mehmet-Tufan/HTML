@@ -37,10 +37,61 @@ color:white;
 border-radius: 5px;
 }
 .btn:hover{
-background-color: hsl(128, 100%, 60%);
+background-color: hsl(240, 12%, 90%);
 color: black;
 }
 .btn:active{
-background-color: rgb(255, 51, 163);
+background-color: rgb(145, 233, 167);
 
 } 
+
+.user-card{
+    display: inline-block;
+    padding: 3px;
+    width: 22%;
+    min-height: 50px;
+    margin-top: 10px;
+    
+}
+.content{
+    border: 1px solid lightgray;
+    min-height: 200px;
+    border-radius: 10px;
+    text-align: left;
+}
+.content:hover{
+    box-shadow: -8px 0px 26px -17px rgb(0,0,0,75) ;
+
+}
+
+.user-img{
+    width: 100%;
+    height:100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+
+
+}
+
+.kampanya-text{
+    background-color: rgb(242, 232, 255);
+    color: rgb(119, 35, 219);
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px;
+}
+.product-text{
+    color: #484848;
+    font-size: 13px;
+    margin-left: 5px;
+}
+.like{
+
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 30px;
+
+}
