@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV</title>
+    <style>
+        /**
+        MARGIN: Bir elementin dış çeperlerinden olan
+        uzaklık. [left, right,top, botton]
+
+        BORDER: Bir bileşenin dört çevresinde bulunan 
+        kenarları birleştiren kenarlığı ifade eder.
+
+        PADDİNG: Bir bileşenin kendi içerisindeki bileşenlere 
+        olan iç uzaklıklığını ifade eder.
+
+        ÖNEMLİ !!! padding ile ilgili bileşenin hacminin artmasına
+        neden olur.
+        */
+        div{
+            border: 1px solid red;
+            padding: 5px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 20px;
+            border: 1px solid red;
+        }
+        .kutu{
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 20px; 
+            border-top-right-radius: 20px; 
+        }
+
+        .bilgi-formu{
+            padding: 5px;
+            width: 65%;
+        }
+        .makale-box{
+            border: 2px dotted green;
+            width: 50%;
+            height: 300px;
+            overflow: hidden;
+            /**
+             overflow: scroll;
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <input class="bilgi-formu" type="text" name="ad" id="ad">
+    </div>
+    <div class="div2">
+        <label>Muhammet Hoca ile ReactJD</label>
+    </div>
+    <div class="div3">
+        <label>Konu ve içeriklerim tam listesi</label>
+    </div>
+    <div class="makale-box">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas suscipit consequatur ex sit nam rem, nisi facere in architecto sequi aliquid dolorem modi natus eos error maiores optio nemo.
+
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa autem excepturi eius esse possimus ea debitis non expedita cupiditate! Illum obcaecati animi veritatis, libero voluptatum voluptate suscipit reiciendis aliquam consequuntur.
+            Tempore maxime quos impedit cum eos illo, molestias ipsum deserunt alias perspiciatis cupiditate laborum accusamus mollitia. Dolor quos perferendis, libero animi vero nisi quisquam ad earum ducimus quasi architecto ipsum.
+            Tenetur, eligendi debitis quam, ullam voluptatem deleniti dolorum laborum non nulla maiores nostrum reiciendis inventore recusandae maxime deserunt doloribus aliquid fugiat quod nihil atque? Vitae voluptatum ipsam illum repudiandae eum.
+        </p>
+    </div>
+    <div>
+        <button>buradan çık</button>
+    </div>
+    <br>
+    <br>
+    <div class="kutu">
+
+    </div>
+    
+</body>
+</html>
