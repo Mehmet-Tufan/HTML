@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değişkenler</title>
+</head>
+<body>
+    <h1>JS Değişkenler</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A, provident fugit ab explicabo iure natus minima sit fuga ea, quis nisi cupiditate nesciunt officia, officiis culpa. Suscipit fuga necessitatibus nesciunt.
+    </p>
+    <script>
+        /*
+         * IO
+         * console.log('merhaba');
+         * JavaScript type safe bir dil değildir. Yani güvenliği yoktur
+         * Burada kast edilen şey bir değişken belli bir türde tanımlanamaz.
+         * JS datatypes
+         * var, let, const
+         */
+         console.log('Merhaba');
+         // int sayi = 4
+         var sayi = 4;
+         console.log('değişken değeri....: '+ sayi);//ifade ve sayi birleştirilir
+         console.log("değişken değeri....: "+ sayi);
+         console.log('değişken değeri....: ',sayi);//ifade ve sayi ayrışır
+         const musteri = {
+            ad: 'mehmet',
+            soyad: 'tufan'
+
+         };
+         console.log('musteri: '+musteri);
+         console.log('musteri: ',musteri);
+
+         let ad = prompt('Lütfen adınızı giriniz');
+         console.log('adınız: ',ad);
+
+         alert('Dikkat beklenmeyen duruM')
+    </script>
+    
+</body>
+</html>

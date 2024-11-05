@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ornek 3</title>
+    <style>
+         .container{
+            border: 2px solid #ed0707;
+            height: 95vh;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        .row{
+            display: flex;
+            flex-direction: column;
+            
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .col-1{
+            border: 1px solid green;
+            height: 100%;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        .col-2{
+            border: 1px solid green;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        .col-3{
+            border: 1px solid green;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        .column-4{
+            flex: 3;
+        }
+        .column-8{
+            flex: 9;
+        }
+        .text-1{
+            display: inline-block;
+            color: rgb(6, 168, 168);
+            padding-left: 40%;
+            padding-top: 20%;
+        
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row column-4">
+            <div class="col-1"></div>
+        </div>
+        <div class="row column-8">
+            <div class="col-2 column-4">
+                <label class="text-1">FLEX DİRECTİON</label>
+            </div>
+            <div class="col-3 column-8"></div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

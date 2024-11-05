@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soru 1</title>
+</head>
+<body>
+    <script>
+        let urun = {
+            id: 1,
+            ad: 'apple_phone',
+            aciklama: 'apple 15',
+            fiyat: 300,
+            stockNumber: 123,
+            kategori: {
+                id: 2,
+                ad: 'telefon',
+                parentId: 1
+            }
+
+        }
+
+        console.log(urun.kategori.ad);
+
+        let result = {
+            code: 1134,
+            size: 20,
+            page: 2,
+            message: 'sayfam',
+
+            data: jasonArray = [
+                 {
+                  id: 1,
+                  ad: 'telefon',
+                  url: 'https://',
+                  resim: 'https://picsum.photos/200/200'
+                },
+                {
+                  id: 2,
+                  ad: 'mouse',
+                  url: 'https://',
+                  resim: 'https://picsum.photos/200/200'
+                },
+                {
+                    id: 3,
+                  ad: 'klavye',
+                  url: 'https://',
+                  resim: 'https://picsum.photos/200/200'  
+                }
+            ]
+        }
+        console.log(result.data[1].resim);
+        
+        
+    </script>
+</body>
+</html>
