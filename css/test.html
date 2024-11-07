@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Bileşen</title>
+    <style> .component { border: 2px solid #333; padding: 20px; text-align: center; margin: 10px auto; width: 300px; } .component h1 { color: #007BFF; } .component button { padding: 10px 20px; border: none; background-color: #007BFF; color: white; cursor: pointer; } </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="app.js"></script>
+    <script>
+        class MyComponent {
+    constructor(name) {
+        this.name = name;
+    }
+
+    render() {
+        const element = document.createElement('div');
+        element.innerHTML = `<h1>Merhaba, ${this.name}!</h1>`;
+        return element;
+    }
+}
+
+// Bileşeni app div'ine ekleyelim
+const app = document.getElementById('app');
+const myComponent = new MyComponent('Dünya');
+app.appendChild(myComponent.render());
+
+
+
+    </script>
+    <script>
+        class InteractiveComponent {
+    constructor(name) {
+        this.name = name;
+    }
+
+    render() {
+        const element = document.createElement('div');
+        element.innerHTML = `
+            <h1>Merhaba, ${this.name}!</h1>
+            <button id="changeNameButton">Adı Değiştir</button>
+        `;
+        
+        // Butona tıklama olayı ekleyelim
+        element.querySelector('#changeNameButton').addEventListener('click', () => {
+            this.name = 'Yeni İsim';
+            element.querySelector('h1').textContent = `Merhaba, ${this.name}!`;
+        });
+
+        return element;
+    }
+}
+
+// Bileşeni app div'ine ekleyelim
+const app2 = document.getElementById('app');
+const interactiveComponent = new InteractiveComponent('Dünya');
+app.appendChild(interactiveComponent.render());
+
+    </script>
+    <script>
+class StyledComponent {
+    constructor(name) {
+        this.name = name;
+    }
+
+    render() {
+        const element = document.createElement('div');
+        element.className = 'component';
+        element.innerHTML = `
+            <h1>Merhaba, ${this.name}!</h1>
+            <button id="changeNameButton">Adı Değiştir</button>
+        `;
+        
+        // Butona tıklama olayı ekleyelim
+        element.querySelector('#changeNameButton').addEventListener('click', () => {
+            this.name = 'Yeni İsim';
+            element.querySelector('h1').textContent = `Merhaba, ${this.name}!`;
+        });
+
+        return element;
+    }
+}
+
+// Bileşeni app div'ine ekleyelim
+const app3 = document.getElementById('app');
+const styledComponent = new StyledComponent('Dünya');
+app.appendChild(styledComponent.render());
+
+    </script>
+
+</body>
+</html>
+

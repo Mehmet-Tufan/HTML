@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    <button>Bunu tıkla</button><br><br>
+    <label id="yazi">burada birşeyler yazmalisin</label>
+    <script>
+        // document.querySelector('button').addEventListener('click', islemYap);
+
+        function islemYap() {
+            console.log('butona tıklandı');
+        }
+
+        const labelYazi = document.getElementById('yazi');
+        labelYazi.addEventListener('click', islemYap2);
+        function islemYap2() {
+           labelYazi.style.color = 'red';
+        }
+        // mouse üzerine geldiğinde
+        labelYazi.addEventListener('mouseover', yaziRengiSil);
+        labelYazi.addEventListener('mouseleave', yaziRengiSil);
+labelYazi.addEventListener('mousewheel', yaziBuyut);
+        // mouse-away'a geldiğinde
+        let size =14;
+        function yaziBuyut(event) {
+            console.log(event);
+            if(evemt.deltaY<0) {
+                size++;
+            } else {
+                size--;
+            }
+            labelYazi.style.fontSize = size + 'px';
+            
+        }
+        function yaziRengiSil() {
+            labelYazi.style.color = 'black';
+        }
+    </script>
+</body>
+</html>

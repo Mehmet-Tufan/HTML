@@ -5,123 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayfa Düzeni</title>
     <style>
-        .header{
-            border: 1px solid green;
-            display: flex;
-            flex-direction: column;
-            height: 25vh;
-            border-radius: 10px;
-            margin: 10px;
-        }
         .container{
-            
-            border: 1px solid red;
-            display: flex;
-            flex-direction: column;
-
+            border: 2px solid red;
+            height: 96vh;
+            text-align: center;
         }
-        .sidemenu{
+        .header{
+            display: inline-block;
             border: 1px solid green;
-            display: flex;
-            flex-direction: column;
-           height: 71vh;
-            border-radius: 10px;
             margin: 10px;
-        }
-        .body{
-            border: 1px solid green;
-            min-height: 400px;
-            margin: 10px;
+            height: 20vh;
+            width: 80%;
             border-radius: 10px;
-            flex: 9;
-
-           
         }
-        .column{
-            
-            border: 1px solid blue;
+        .contain{            
+            margin: 2px;
+            height: 71vh;
             display: flex;
             flex-direction: row;
+        }
+        .side-menu{
+            border: 1px solid blue;
+            height: 71vh;
+            flex: 3;
             margin: 2px;
-
+            border-radius: 10px;
+        }
+        .content-body{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid chocolate;
+            height: 71vh;
+            flex: 9;
+            margin: 2px;
+            border-radius: 10px;
         }
         .footer{
-            border: 1px solid green;
-           
-           margin: 10px ;
+            display: flex;
+            border: 1px solid black;
+            flex: 2;
+            
             border-radius: 10px;
-            flex: 3;
         }
-        .column-2{
-            display: flex;
-            flex-direction: column;
-            border: 3px solid black;
-            margin: 2px;
-            flex: 3;
-
-        }
-        .column-3{
-            display: flex;
-            flex-direction: column;
-            border: 2px solid blueviolet;
-            margin: 2px;
-            flex: 9;
-
-        }
-        .col-2{
-            flex: 2;
-        }
-        .col-3{
-            flex: 2;
-        }
+        .body{border: 1px solid black;
+            flex: 10;
+            border-radius: 10px;}
         li{
             list-style-type: none;
             text-align: left;
-            margin: 0;
-            padding: 0;
-            margin-bottom: 3px;
-            
+            /* margin: 0px; */
+            padding: 2px 5px;
+            font-size: small;
+            margin-bottom: 3px;                   
         }
         ul{
-            padding-inline-start: 5px;
+            padding-inline-start: 0px;
 
         }
+        span{
+            margin-left: 5px; 
+            font-size: smaller;
+            color: #74C0FC;
+        }
+        li:hover{
+            background-color: rgb(245, 243, 241);
+            cursor: pointer;
+        }
+       
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!--
-        üst alanda header kısmı olacak 
-        sol alanda 
+        1- üst alanda header
+        2- sol alanda sideMenu
+        3- orta alanda body
+        4- altta footer
     -->
-
-<div class="container">
-    <div class="header"></div>
-    <div class="column">
-        <div class="column-2">
-            <div class="sidemenu">
-                <ul>
-                    <li>Ana sayfa</li>
-                    <li>Müşteri listesi</li>
-                    <li>Ürün listesi</li>
-
-                </ul>
+        <div class="container">
+            <div class="header">
+            </div>
+            <div class="contain">
+                <div class="side-menu">
+                    <ul>
+                        <li><i class="fa-solid fa-house" style="color: #74C0FC;"></i><span>Ana Sayfa</span></li>
+                        <li><i class="fa-solid fa-users-line" style="color: #74C0FC;"></i><span>Müşteri Listesi</span></li>
+                        <li><i class="fa-solid fa-rectangle-list" style="color: #74C0FC;"></i><span>Ürün Listesi</span></li>
+                        <li><i class="fa-solid fa-truck" style="color: #74C0FC;"></i><span>Kargo</span></li>
+                        <li><i class="fa-solid fa-users-viewfinder" style="color: #74C0FC;"></i><span>Kullanıcı Listesi</span></li>
+                    </ul>
+                </div>
+                <div class="content-body">
+                    <div class="body"></div>
+                    <div class="footer"></div>
+                </div>
             </div>
         </div>
         
-        <div class="column-3">
-            <div class="body"></div>
-        <div class="footer"></div>
-        </div>
         
-    </div>
-   
-    
-</div>
-
-
-
-
-
-    
 </body>
 </html>
